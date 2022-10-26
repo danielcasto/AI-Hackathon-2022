@@ -38,10 +38,16 @@ h3 {
   font-size: 22px;
 }
 
-p {
+p1 {
   color: #0F4267;
   font-style:normal;
   font-size: 18px;
+}
+
+p2 {
+  color: #5CB12E;
+  font-style:normal;
+  font-size: 16px;
 }
 
 mark {
