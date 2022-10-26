@@ -6,31 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="https://glitch.com/favicon.ico" />
 
-  <title> Sign Language </title>
+  <title>Image-to-Text Sign Language</title>
 
   <!-- import the webpage's stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
   <!-- import the webpage's javascript file -->
-  <script src="p5.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous"
-    referrerpolicy="no-referrer"></script>
+  <script> 
+  var video = document.querySelector("#videoElement");
 
-
+    if (navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+          video.srcObject = stream;
+        })
+        .catch(function (err0r) {
+          console.log("Something went wrong!");
+        });
+    }
+    
+    if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      video.srcObject = stream;
+    })
+    .catch(function (err0r) {
+      console.log("Something went wrong!");
+    });
+}
+    </script>
 </head>
 
 <body>
   <!-- this is the start of content -->
-  <a href="hackathon_webpage.html"><h4> <mark> <mark style = "background-color:#CAFFB9; color:white;">Sign Language</mark></h4></a>
+  <a href="hackathon_webpage.html"><h4> <mark>Image-to-Text Sign Language</mark></h4></a>
 
-  <h1> Welcome! </h1>
-  <h2> This a page for image-to-text sign language. </h2>
-  <h3> Check it out </h3>
+  <h1>Welcome!</h1>
+  <p> This a page for image-to-text sign language. </p>
+
+  <div id = "container"> 
+    <video autoplay="true" id="video">
+	  </video>
+  </div>
+
+  <div class="footer">
+    <h1>CGRK // UF AI Days Hackathon 2022</h1>
+  </div>
 
 </body>
-
-<div class="footer">
-  <h6> Casto, Goswami, Rangel Krashenitsa // UF AI Day Hackathon 2022</h6>
-</div>
-
 </html>
