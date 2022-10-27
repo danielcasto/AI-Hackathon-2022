@@ -110,15 +110,51 @@
                   prediction[highestLabel].className + ": Prediction of " + prediction[highestLabel].probability.toFixed(2);
                   //labelContainer.childNodes[highestLabel].innerHTML = classPrediction;
                   document.getElementById('output').innerHTML = classPrediction;
+                  setPictures(prediction[highestLabel].className)
           }
 
+      }
+
+      function setPictures(predictionLabelName) {
+        switch(predictionLabelName) {
+          case "One":
+            break;
           
+          case "Two":
+            break;
+          
+          case "Three":
+            break;
+          
+          case "Four":
+            break;
+
+          case "Five":
+            break;
+
+          case "Six":
+            break;
+
+          case "Seven":
+            break;
+
+          case "Eight":
+            break;
+
+          case "Nine":
+            break;
+        }
       }
 
   </script>
   </div>
 
   <p id="output"></p>
+
+  <img id="img1">
+  <img id="img2">
+  <img id="img3">
+  <img id="img4">
 
   <script src="main.js"></script>
 
