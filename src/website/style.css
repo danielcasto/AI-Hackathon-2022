@@ -76,8 +76,8 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #2E4057;
-  color: FFFDEA;
+  background-color: #0F4267;
+  color: #FFFDEA;
   text-align: center;
 }
 
@@ -101,22 +101,22 @@ footer {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #CAFFB9;
-  color: #66A182;
+  background-color: #5CB12E;
+  color: #6F7078;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #66A182;
-  color: #C0D461;
+  background-color: #6F7078;
+  color: #FFFDEA;
 }
 
 /* All the parameters for buttons to be used throughout the site */
 .button {
   border: none;
-  background-color: #66A182;
-  color: #C0D461;
-  border: 2px solid #CAFFB9;
+  background-color: #0F4267;
+  color: #3B81C2;
+  border: 2px solid #6F7078;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
@@ -129,6 +129,6 @@ footer {
 
 /* Change color of button on hover */
 .button:hover {
-  background-color: #CAFFB9;
-  color: #66A182;
+  background-color: #3B81C2;
+  color: #6F7078;
 }
