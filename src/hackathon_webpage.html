@@ -42,6 +42,10 @@
       const URL = "https://teachablemachine.withgoogle.com/models/qZyO52I_5/";
   
       let model, webcam, labelContainer, maxPredictions;
+
+      paused = false;
+      predictionLabelName = "";
+  
   
       // Load the image model and setup the webcam
       async function init() {
@@ -110,52 +114,103 @@
                   prediction[highestLabel].className + ": Prediction of " + prediction[highestLabel].probability.toFixed(2);
                   //labelContainer.childNodes[highestLabel].innerHTML = classPrediction;
                   document.getElementById('output').innerHTML = classPrediction;
+                  predictionLabelName = prediction[highestLabel].className;
+
+                  switch(highestLabel) {
+                    
+                    case 1:
+                      document.getElementById("img1").src = "assets/1A.png"
+                      document.getElementById("img2").src = "assets/1B.png"
+                      document.getElementById("img3").src = "assets/1C.png"
+                      document.getElementById("img4").src = "assets/1D.png"
+                      break;
+                    
+                    case 2:
+                      document.getElementById("img1").src = "assets/2A.png"
+                      document.getElementById("img2").src = "assets/2B.png"
+                      document.getElementById("img3").src = "assets/2C.png"
+                      document.getElementById("img4").src = "assets/2D.png"
+                      break;
+                    
+                    case "3":
+                    document.getElementById("img1").src = "assets/3A.png"
+                    document.getElementById("img2").src = "assets/3B.png"
+                      document.getElementById("img3").src = "assets/3C.png"
+                      document.getElementById("img4").src = "assets/3D.png"
+                      break;
+                    
+                    case 4:
+                    document.getElementById("img1").src = "assets/4A.png"
+                    document.getElementById("img2").src = "assets/4B.png"
+                      document.getElementById("img3").src = "assets/4C.png"
+                      document.getElementById("img4").src = "assets/4D.png"
+                      break;
+
+                    case 5:
+                    document.getElementById("img1").src = "assets/5A.png"
+                    document.getElementById("img2").src = "assets/5B.png"
+                      document.getElementById("img3").src = "assets/5C.png"
+                      document.getElementById("img4").src = "assets/5D.png"
+                      break;
+
+                    case 6:
+                    document.getElementById("img1").src = "assets/6A.png"
+                    document.getElementById("img2").src = "assets/6B.png"
+                      document.getElementById("img3").src = "assets/6C.png"
+                      document.getElementById("img4").src = "assets/6D.png"
+                      break;
+
+                    case 7:
+                    document.getElementById("img1").src = "assets/7A.png"
+                    document.getElementById("img2").src = "assets/7B.png"
+                      document.getElementById("img3").src = "assets/7C.png"
+                      document.getElementById("img4").src = "assets/7D.png"
+                      break;
+
+                    case 8:
+                    document.getElementById("img1").src = "assets/8A.png"
+                    document.getElementById("img2").src = "assets/8B.png"
+                      document.getElementById("img3").src = "assets/8C.png"
+                      document.getElementById("img4").src = "assets/8D.png"
+                      break;
+
+                    case 9:
+                      document.getElementById("img1").src = "assets/9A.png"
+                      document.getElementById("img2").src = "assets/9B.png"
+                      document.getElementById("img3").src = "assets/9C.png"
+                      document.getElementById("img4").src = "assets/9D.png"
+                      break;
+                    default:
+                    document.getElementById("img1").src = "assets/0A.png"
+                      document.getElementById("img2").src = "assets/0B.png"
+                      document.getElementById("img3").src = "assets/0C.png"
+                      document.getElementById("img4").src = "assets/0D.png"
+                      break;  
+                  }
           }
 
       }
 
-      function setPictures(predictionLabelName) {
-        switch(predictionLabelName) {
-          case "One":
-            document.getElementById("1").src = "assets/1A.png"
-            break;
-          
-          case "Two":
-            break;
-          
-          case "Three":
-            break;
-          
-          case "Four":
-            break;
+      function togglePause() {
+      if (paused) {
+        paused = false;
+      } else {
+        setPictures(predictionLabelName);
 
-          case "Five":
-            break;
-
-          case "Six":
-            break;
-
-          case "Seven":
-            break;
-
-          case "Eight":
-            break;
-
-          case "Nine":
-            document.getElementById("2").src = "assets/9A.png"
-            break;
-        }
+        paused = true;
       }
+    }
 
   </script>
   </div>
+  <!-- <button id="pauseBtn" onclick="togglePause()"></button> -->
 
   <p id="output"></p>
-
-  <img id="img1">
-  <img id="img2">
-  <img id="img3">
-  <img id="img4">
+  <img id="img1" width="200">
+  <img id="img2" width="200">
+  <img id="img3" width="200">
+  <img id="img4" width="200">
+  
 
   <script src="main.js"></script>
 
