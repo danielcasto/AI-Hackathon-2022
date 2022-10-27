@@ -65,6 +65,7 @@
           // append elements to the DOM
           document.getElementById("webcam-container").appendChild(webcam.canvas);
           labelContainer = document.getElementById("label-container");
+
           for (let i = 0; i < maxPredictions; i++) { // and class labels
               labelContainer.appendChild(document.createElement("div"));
           }
@@ -76,16 +77,43 @@
           window.requestAnimationFrame(loop);
       }
   
+      // // run the webcam image through the image model
+      // run the webcam image through the image model
+      // async function predict() {
+      //     // predict can take in an image, video or canvas html element
+      //     const prediction = await model.predict(webcam.canvas);
+      //     for (let i = 0; i < maxPredictions; i++) {
+      //         const classPrediction =
+      //             prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+      //         labelContainer.childNodes[i].innerHTML = classPrediction;
+      //     }
+      // } 
+      //}
+
       // run the webcam image through the image model
       async function predict() {
-          // predict can take in an image, video or canvas html element
-          const prediction = await model.predict(webcam.canvas);
+        const prediction = await model.predict(webcam.canvas);
+        highestLabel = 0;
+        highestProb = prediction[0].probability.toFixed(2);
+        //predict can take in an image, video or canvas html element
+          
           for (let i = 0; i < maxPredictions; i++) {
+                  console.log("Probability is " + prediction[i].probability.toFixed(2) + " for " + i);
+                  console.log("Highest label right now is " + highestLabel);
+                  console.log("Highest prob right now is " + highestProb);
+                    if (highestProb <= prediction[i].probability.toFixed(2)){
+                      highestLabel = i;
+                      highestProb = prediction[i].probability.toFixed(2);
+                    }
+                
               const classPrediction =
                   prediction[i].className + ": " + prediction[i].probability.toFixed(2);
               labelContainer.childNodes[i].innerHTML = classPrediction;
           }
+
+          //document.write(highestLabel);
       }
+
   </script>
     
   </div>
