@@ -42,6 +42,9 @@
       const URL = "https://teachablemachine.withgoogle.com/models/qZyO52I_5/";
   
       let model, webcam, labelContainer, maxPredictions;
+
+      paused = false;
+      predictionLabelName = "";
   
       // Load the image model and setup the webcam
       async function init() {
@@ -110,6 +113,7 @@
                   prediction[highestLabel].className + ": Prediction of " + prediction[highestLabel].probability.toFixed(2);
                   //labelContainer.childNodes[highestLabel].innerHTML = classPrediction;
                   document.getElementById('output').innerHTML = classPrediction;
+                  predictionLabelName = prediction[highestLabel].className;
           }
 
       }
@@ -147,10 +151,21 @@
         }
       }
 
+    function togglePause() {
+      if (paused) {
+        paused = false;
+      } else {
+        setPictures(predictionLabelName);
+
+        paused = true;
+      }
+    }
+
   </script>
   </div>
 
   <p id="output"></p>
+  <button id="pauseBtn" onclick="togglePause()"></button>
 
   <img id="img1">
   <img id="img2">
