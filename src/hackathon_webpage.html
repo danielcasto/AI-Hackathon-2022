@@ -6,76 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="https://glitch.com/favicon.ico" />
 
-  <!-- import the pyscript -->
-  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-
-  <!-- import the python libraries -->
-  <py-env>
-    - numpy
-    - opencv-python
-    - matplotlib
-    </py-env>
-  <py-script>
-    import numpy as np
-    import cv2 as cv
-    from matplotlib import pyplot as plt
-  </py-script>
-
   <title>Image-to-Text Sign Language</title>
 
   <!-- import the webpage's stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
   <!-- import the webpage's javascript file -->
-  <script> 
 
-  // var video = document.querySelector("#videoElement");
-  //   if (navigator.mediaDevices.getUserMedia) {
-  //     navigator.mediaDevices.getUserMedia({ video: true })
-  //       .then(function (stream) {
-  //         video.srcObject = stream;
-  //       })
-  //       .catch(function (err0r) {
-  //         console.log("Something went wrong!");
-  //       });
-  //   }
-
-    // let video = document.getElementById("videoInput"); // video is the id of video tag
-    // navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-    //   .then(function(stream) {
-    //       video.srcObject = stream;
-    //       video.play();
-    //   })
-    //   .catch(function(err) {
-    //       console.log("An error occurred! " + err);
-    //   });
-    </script>
 </head>
 
 <body>
-
-  <script>
-
-    // let canvasFrame = document.getElementById("canvasFrame"); // canvasFrame is the id of <canvas>
-    // let context = canvasFrame.getContext("2d");
-    // let src = new cv.Mat(height, width, cv.CV_8UC4);
-    // let dst = new cv.Mat(height, width, cv.CV_8UC1);
-    // const FPS = 30;
-    // function processVideo() {
-    //     let begin = Date.now();
-    //     context.drawImage(video, 0, 0, width, height);
-    //     src.data.set(context.getImageData(0, 0, width, height).data);
-    //     cv.cvtColor(src, dst, cv.COLOR_RGBA2GRAY);
-    //     cv.imshow("canvasOutput", dst); // canvasOutput is the id of another <canvas>;
-    //     // schedule next one.
-    //     let delay = 1000/FPS - (Date.now() - begin);
-    //     setTimeout(processVideo, delay);
-    // }
-    // // schedule first one.
-    // setTimeout(processVideo, 0);
-    
-  </script>
 
   <!-- this is the start of content -->
   <a href="hackathon_webpage.html"><h4> <mark>Image-to-Text Sign Language</mark></h4></a>
@@ -85,8 +25,6 @@
 
   <div id = "container"> 
     <video autoplay="true" id="videoElement">
-
-
     </video>
     
   </div>
