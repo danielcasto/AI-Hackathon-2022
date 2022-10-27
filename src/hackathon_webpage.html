@@ -107,16 +107,18 @@
                     }
                 
               const classPrediction =
-                  prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-              labelContainer.childNodes[i].innerHTML = classPrediction;
+                  prediction[highestLabel].className + ": Prediction of " + prediction[highestLabel].probability.toFixed(2);
+                  //labelContainer.childNodes[highestLabel].innerHTML = classPrediction;
+                  document.getElementById('output').innerHTML = classPrediction;
           }
 
-          //document.write(highestLabel);
+          
       }
 
   </script>
-    
   </div>
+
+  <p id="output"></p>
 
   <script src="main.js"></script>
 
