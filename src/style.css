@@ -11,7 +11,7 @@ html {
 /* adjust typography defaults */
 body {
   margin: 3rem;
-  background-color: #FFFDEA;
+  background-color: #262627;
   font-family: sans-serif;
   font-size: 16px;
   text-align: center;
@@ -61,7 +61,7 @@ mark {
 	margin: 0px auto;
 	width: 520px;
 	height: 375px;
-	border: 10px #6F7078 solid;
+	border: 10px #262627 solid;
 }
 
 #videoElement {
@@ -74,7 +74,7 @@ img,
 video {
   height: auto;
   max-width: 100%;
-  background-color:#6F7078;
+  background-color:#262627;
 }
 
 footer {
@@ -89,7 +89,7 @@ footer {
 
 /* Add a background color to the top navigation */
 .topnav {
-  background-color: #66A182;
+  background-color: #5CB12E;
   overflow: hidden;
   text-align: center;
   align-content: center;
@@ -98,7 +98,7 @@ footer {
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
-  color: #CAFFB9;
+  color: #5CB12E;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
