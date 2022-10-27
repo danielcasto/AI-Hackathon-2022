@@ -64,6 +64,12 @@ mark {
 	border: 10px #6F7078 solid;
 }
 
+#videoElement {
+  width: 500px;
+	height: 355px;
+  background-color: #3B81C2;
+}
+
 img,
 video {
   height: auto;
